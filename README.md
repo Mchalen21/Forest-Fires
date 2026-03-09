@@ -1,28 +1,26 @@
-# Forest-Fires
-# Forest Fire Prediction
+# Forest Fire Prediction using Linear Regression
 
-## Project Overview
-This project analyzes the Forest Fires dataset to predict burned forest area using meteorological data.
+Overview
+This project predicts the burned area of forest fires using weather and environmental variables from Montesinho Natural Park, Portugal. It demonstrates a complete data science workflow: EDA, cleaning, and modeling.
 
-## Project Structure
+Dataset
+The dataset contains 517 observations of environmental variables such as temperature, humidity, wind, and fire weather indices. The target variable is the burned area, which was log-transformed to reduce skewness.
 
-data/
-notebooks/
-explore.ipynb
-clean.ipynb
-model.ipynb
+ Project Structure
+- data/forestfires_clean.csv
+- notebooks/explore.ipynb
+- notebooks/clean.ipynb
+- notebooks/model.ipynb
+- README.md
 
-## Step 1: Data Exploration
-Initial exploration was performed to understand dataset structure, detect missing values, and visualize variable distributions.
+Data Cleaning & Preprocessing
+- Removed duplicate rows
+- Applied log transformation to the target variable
+- Encoded categorical variables (month and day) using one-hot encoding
+- Scaled numerical features using StandardScaler
 
-## Step 2: Data Cleaning
-Duplicate records were removed and categorical variables were encoded.
+Modeling
+A Linear Regression model was trained on 80% of the dataset and evaluated on 20% of the data. The model predicts log-transformed burned area based on the weather and fire index variables.
 
-## Step 3: Feature Engineering
-A log transformation was applied to the target variable due to skewness.
-
-## Step 4: Model Building
-Baseline regression models were trained including Linear Regression and Random Forest.
-
-## Results
-Random Forest produced better performance than Linear Regression, indicating nonlinear relationships between meteorological variables and fire size.
+Results
+The model achieved reasonable performance given the high variability in fire sizes. Evaluation metrics (RMSE and R²) indicate that the model captures some relationships between environmental variables and burned area, but extreme fires remain difficult to predict.
