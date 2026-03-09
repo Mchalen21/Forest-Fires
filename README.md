@@ -1,9 +1,11 @@
 # Forest Fire Prediction using Linear Regression
 
 Overview
+
 This project predicts the burned area of forest fires using weather and environmental variables from Montesinho Natural Park, Portugal. It demonstrates a complete data science workflow: EDA, cleaning, and modeling.
 
 Dataset
+
 The dataset contains 517 observations of environmental variables such as temperature, humidity, wind, and fire weather indices. The target variable is the burned area, which was log-transformed to reduce skewness.
 
  Project Structure
